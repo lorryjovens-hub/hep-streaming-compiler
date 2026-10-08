@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hep-streaming-compiler"
+version = "0.3.0"
+description = "Streaming GUI compiler with aesthetic lint, design-vault atom learning, and A2UI-aligned catalog — conversations build, interfaces serve"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "Lorry Jovens & Aris (LAAP)" }]
+keywords = ["generative-ui", "streaming", "agent", "a2ui", "design-system", "compiler"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: User Interfaces",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["hep_stream*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
